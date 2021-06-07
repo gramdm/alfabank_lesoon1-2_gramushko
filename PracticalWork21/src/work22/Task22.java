@@ -1,14 +1,16 @@
 package work22;
-
+import java.text.SimpleDateFormat;
+import java.util.*;
 public class Task22 {
+
     public static void main(String[] args) {
-       long time = System.currentTimeMillis();
-        System.out.println(System.currentTimeMillis());
-        long seconds = time/1000;
-        long minutes = seconds/60;
-        long hour = minutes/60;
-        long date = hour/24;
-        System.out.println (date+":" +hour+":" +minutes+":" +seconds);
-        System.out.println();
+      long currentTime = System.currentTimeMillis()/1000;
+      long sec = currentTime%60;
+      long min = currentTime / 60%60;
+      long hour= currentTime / 60%24;
+        SimpleDateFormat dateFormat=new SimpleDateFormat("DD:HH:MM:SS");
+    System.out.println(dateFormat.format(new Date()));
+    System.out.println(currentTime+":"+hour+";");
+
     }
 }
